@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Agent</title>
+    <link rel="stylesheet" href="client/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Chat Agent</h1>
+            <p>Powered by Lean Agents SDK</p>
+        </header>
+
+        <div class="agent-config">
+            <div class="config-row">
+                <label for="agent-name">Agent Name:</label>
+                <input type="text" id="agent-name" value="Assistant" placeholder="Enter agent name">
+            </div>
+            <div class="config-row">
+                <label for="agent-instructions">Agent Instructions:</label>
+                <textarea id="agent-instructions" placeholder="Enter agent instructions" rows="2">You are a helpful assistant.</textarea>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chat-messages">
+                <div class="system-message">
+                    Welcome! Configure your agent above and start chatting.
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="input-group">
+                    <textarea 
+                        id="message-input" 
+                        placeholder="Type your message here..." 
+                        rows="3"
+                        disabled
+                    ></textarea>
+                    <button id="send-button" disabled>Send</button>
+                </div>
+                <div class="status" id="status">Ready to chat</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/client/script.js"></script>
+</body>
+</html>

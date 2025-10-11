@@ -7,6 +7,7 @@ name = "ai-agents-journal"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "fastapi" },
     { name = "jinja2" },
     { name = "openai-agents", extra = ["litellm"] },
     { name = "pip" },
@@ -16,6 +17,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fastapi", specifier = ">=0.118.3" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "openai-agents", extras = ["litellm"], specifier = ">=0.3.3" },
     { name = "pip", specifier = ">=25.2" },
@@ -244,6 +246,20 @@ wheels = [
 ]
 
 [[package]]
+name = "fastapi"
+version = "0.119.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0a/f9/5c5bcce82a7997cc0eb8c47b7800f862f6b56adc40486ed246e5010d443b/fastapi-0.119.0.tar.gz", hash = "sha256:451082403a2c1f0b99c6bd57c09110ed5463856804c8078d38e5a1f1035dbbb7", size = 336756, upload-time = "2025-10-11T17:13:40.53Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/70/584c4d7cad80f5e833715c0a29962d7c93b4d18eed522a02981a6d1b6ee5/fastapi-0.119.0-py3-none-any.whl", hash = "sha256:90a2e49ed19515320abb864df570dd766be0662c5d577688f1600170f7f73cf2", size = 107095, upload-time = "2025-10-11T17:13:39.048Z" },
+]
+
+[[package]]
 name = "fastuuid"
 version = "0.13.5"
 source = { registry = "https://pypi.org/simple" }
@@ -446,11 +462,11 @@ wheels = [
 
 [[package]]
 name = "httpx-sse"
-version = "0.4.2"
+version = "0.4.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/63/7a/280d644f906f077e4f4a6d327e9b6e5a936624395ad1bf6ee9165a9d9959/httpx_sse-0.4.2.tar.gz", hash = "sha256:5bb6a2771a51e6c7a5f5c645e40b8a5f57d8de708f46cb5f3868043c3c18124e", size = 16000, upload-time = "2025-10-07T08:10:05.219Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0f/4c/751061ffa58615a32c31b2d82e8482be8dd4a89154f003147acee90f2be9/httpx_sse-0.4.3.tar.gz", hash = "sha256:9b1ed0127459a66014aec3c56bebd93da3c1bc8bb6618c8082039a44889a755d", size = 15943, upload-time = "2025-10-10T21:48:22.271Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4f/e5/ec31165492ecc52426370b9005e0637d6da02f9579283298affcb1ab614d/httpx_sse-0.4.2-py3-none-any.whl", hash = "sha256:a9fa4afacb293fa50ef9bacb6cae8287ba5fd1f4b1c2d10a35bb981c41da31ab", size = 9018, upload-time = "2025-10-07T08:10:04.257Z" },
+    { url = "https://files.pythonhosted.org/packages/d2/fd/6668e5aec43ab844de6fc74927e155a3b37bf40d7c3790e49fc0406b6578/httpx_sse-0.4.3-py3-none-any.whl", hash = "sha256:0ac1c9fe3c0afad2e0ebb25a934a59f4c7823b60792691f779fad2c5568830fc", size = 8960, upload-time = "2025-10-10T21:48:21.158Z" },
 ]
 
 [[package]]
@@ -582,7 +598,7 @@ wheels = [
 
 [[package]]
 name = "litellm"
-version = "1.77.7"
+version = "1.78.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp" },
@@ -598,9 +614,9 @@ dependencies = [
     { name = "tiktoken" },
     { name = "tokenizers" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/5a/4b/4e9a204462687ca3796cc0fdaefbd624d7b2216edd4ad243d60a3b95127e/litellm-1.77.7.tar.gz", hash = "sha256:e3398fb2575b98726e787c0a1481daed5938d58cafdcd96fbca80c312221af3e", size = 10401706, upload-time = "2025-10-05T00:22:37.646Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/3e/1a96a3caeeb6092d85e70904e2caa98598abb7179cefe734e2fbffac6978/litellm-1.78.0.tar.gz", hash = "sha256:020e40e0d6e16009bb3a6b156d4c1d98cb5c33704aa340fdf9ffd014bfd31f3b", size = 10684595, upload-time = "2025-10-11T19:28:27.369Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/86/50/53df2244d4aca2af73d2f2c6ad21c731cf24bd0dbe89d896184a1eaa874f/litellm-1.77.7-py3-none-any.whl", hash = "sha256:1b3a1b17bd521a0ad25226fb62a912602c803922aabb4a16adf83834673be574", size = 9223061, upload-time = "2025-10-05T00:22:34.112Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/fb/38a48efe3e05a8e9a9765b991740282e0358a83fb896ec00d70bf1448791/litellm-1.78.0-py3-none-any.whl", hash = "sha256:a9d6deee882de8df38ca24beb930689f49209340137ff8a3dcab0c5fc4a0513d", size = 9677983, upload-time = "2025-10-11T19:28:23.242Z" },
 ]
 
 [[package]]
