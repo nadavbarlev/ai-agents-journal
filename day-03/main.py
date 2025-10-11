@@ -4,7 +4,7 @@ from pydantic import BaseModel, Field
 
 from agents import Agent, Runner
 from agents.extensions.models.litellm_model import LitellmModel
-from config import load_env
+from config import with_env
 
 
 class BlogPostIdea(BaseModel):
@@ -28,9 +28,8 @@ class RatedBlogPostIdea(BaseModel):
     )
 
 
+@with_env
 async def main(general_topic: str):
-    load_env()
-
     # Market Research Agent
     market_research_agent = Agent(
         name="MarketResearcher",

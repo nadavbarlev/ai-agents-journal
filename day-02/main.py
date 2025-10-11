@@ -2,12 +2,11 @@ import asyncio
 
 from agents import Agent, Runner
 from agents.extensions.models.litellm_model import LitellmModel
-from config import load_env
+from config import with_env
 
 
+@with_env
 async def main():
-    load_env()
-
     # OpenAI Model
     # agent = Agent(
     #     name="Assistant",

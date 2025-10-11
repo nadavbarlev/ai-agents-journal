@@ -1,12 +1,11 @@
 import asyncio
 
 from agents import Agent, Runner, SQLiteSession
-from config import load_env
+from config import with_env
 
 
+@with_env
 async def main():
-    load_env()
-
     # Chat Without Session
     # agent = Agent(
     #     name="Assistant",

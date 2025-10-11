@@ -2,7 +2,7 @@ import asyncio
 import os
 
 from agents import Agent, Runner, function_tool
-from config import load_env
+from config import with_env
 
 
 @function_tool()
@@ -34,9 +34,8 @@ def create_directory(directory_path: str):
     os.makedirs(directory_path, exist_ok=True)
 
 
+@with_env
 async def main():
-    load_env()
-
     agent = Agent(
         name="Assistant",
         tools=[read_file, create_file, create_directory],

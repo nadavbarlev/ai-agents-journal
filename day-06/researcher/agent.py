@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 from agents import Agent, Runner
 from agents.extensions.models.litellm_model import LitellmModel
-from config import load_env
+from config import with_env
 
 
 class BlogPostIdea(BaseModel):
@@ -16,9 +16,8 @@ class BlogPostIdea(BaseModel):
     )
 
 
+@with_env
 async def main(general_topic: str):
-    load_env()
-
     # Load instructions from file
     script_dir = Path(__file__).parent
     env = Environment(loader=FileSystemLoader(script_dir))

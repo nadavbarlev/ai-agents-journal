@@ -1,3 +1,3 @@
-from .env import load_env
+from .env import with_env
 
-__all__ = ["load_env"]
+__all__ = ["with_env"]
