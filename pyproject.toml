@@ -9,6 +9,7 @@ dependencies = [
     "openai-agents[litellm]>=0.3.3",
     "pip>=25.2",
     "python-dotenv>=1.1.1",
+    "python-telegram-bot[job-queue]>=22.5",
     "ruff>=0.14.0",
 ]
 
